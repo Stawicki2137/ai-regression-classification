@@ -1,0 +1,285 @@
+==================================================
+EWALUACJA MODELU: Drzewo Decyzyjne (Bazowe)
+==================================================
+Mean CV F1 Score for Drzewo Decyzyjne (Bazowe): 0.5268 (+/- 0.0812)
+
+Classification Report for Drzewo Decyzyjne (Bazowe):
+              precision    recall  f1-score   support
+
+           0       0.71      0.73      0.72        37
+           1       0.76      0.74      0.75        50
+           2       0.33      0.33      0.33         3
+
+    accuracy                           0.72        90
+   macro avg       0.60      0.60      0.60        90
+weighted avg       0.72      0.72      0.72        90
+
+
+
+==================================================
+EWALUACJA MODELU: Drzewo Decyzyjne (SMOTE)
+==================================================
+Mean CV F1 Score for Drzewo Decyzyjne (SMOTE): 0.5908 (+/- 0.1233)
+
+Classification Report for Drzewo Decyzyjne (SMOTE):
+              precision    recall  f1-score   support
+
+           0       0.70      0.76      0.73        37
+           1       0.76      0.74      0.75        50
+           2       0.00      0.00      0.00         3
+
+    accuracy                           0.72        90
+   macro avg       0.49      0.50      0.49        90
+weighted avg       0.71      0.72      0.71        90
+
+==================================================
+EWALUACJA MODELU: Drzewo Decyzyjne (Grid Search + SMOTE)
+==================================================
+Fitting 15 folds for each of 108 candidates, totalling 1620 fits
+Best CV Score (f1_macro) for Drzewo Decyzyjne (Grid Search + SMOTE): 0.6233 (+/- 0.1004)
+Najlepsze parametry: {'classifier__criterion': 'entropy', 'classifier__max_depth': 5, 'classifier__min_samples_leaf': 1, 'classifier__min_samples_split': 2}
+
+Classification Report for Drzewo Decyzyjne (Grid Search + SMOTE):
+              precision    recall  f1-score   support
+
+           0       0.87      0.70      0.78        37
+           1       0.78      0.92      0.84        50
+           2       1.00      0.33      0.50         3
+
+    accuracy                           0.81        90
+   macro avg       0.88      0.65      0.71        90
+weighted avg       0.82      0.81      0.80        90
+
+
+
+==================================================
+EWALUACJA MODELU: Drzewo Decyzyjne (Engineering + SMOTE + GridSearch)
+==================================================
+Fitting 15 folds for each of 72 candidates, totalling 1080 fits
+Best CV Score (f1_macro) for Drzewo Decyzyjne (Engineering + SMOTE + GridSearch): 0.6049 (+/- 0.0757)
+Najlepsze parametry: {'classifier__criterion': 'gini', 'classifier__max_depth': 3, 'classifier__min_samples_leaf': 2, 'classifier__min_samples_split': 10}
+
+Classification Report for Drzewo Decyzyjne (Engineering + SMOTE + GridSearch):
+              precision    recall  f1-score   support
+
+           0       0.90      0.70      0.79        37
+           1       0.85      0.88      0.86        50
+           2       0.33      1.00      0.50         3
+
+    accuracy                           0.81        90
+   macro avg       0.69      0.86      0.72        90
+weighted avg       0.85      0.81      0.82        90
+
+
+
+==================================================
+EWALUACJA MODELU: Random Forest (Bazowy)
+==================================================
+Mean CV F1 Score for Random Forest (Bazowy): 0.5602 (+/- 0.0869)
+
+Classification Report for Random Forest (Bazowy):
+              precision    recall  f1-score   support
+
+           0       0.88      0.81      0.85        37
+           1       0.82      0.92      0.87        50
+           2       0.00      0.00      0.00         3
+
+    accuracy                           0.84        90
+   macro avg       0.57      0.58      0.57        90
+weighted avg       0.82      0.84      0.83        90
+
+c:\Users\maciek\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+c:\Users\maciek\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+c:\Users\maciek\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+
+
+==================================================
+EWALUACJA MODELU: Random Forest (SMOTE)
+==================================================
+Mean CV F1 Score for Random Forest (SMOTE): 0.6594 (+/- 0.1142)
+
+Classification Report for Random Forest (SMOTE):
+              precision    recall  f1-score   support
+
+           0       0.86      0.84      0.85        37
+           1       0.87      0.90      0.88        50
+           2       1.00      0.67      0.80         3
+
+    accuracy                           0.87        90
+   macro avg       0.91      0.80      0.84        90
+weighted avg       0.87      0.87      0.87        90
+
+
+
+==================================================
+EWALUACJA MODELU: Random Forest (Grid Search + SMOTE)
+==================================================
+Fitting 15 folds for each of 216 candidates, totalling 3240 fits
+Best CV Score (f1_macro) for Random Forest (Grid Search + SMOTE): 0.6774 (+/- 0.0999)
+Najlepsze parametry: {'classifier__max_depth': None, 'classifier__max_features': 'sqrt', 'classifier__min_samples_leaf': 1, 'classifier__min_samples_split': 10, 'classifier__n_estimators': 100}
+
+Classification Report for Random Forest (Grid Search + SMOTE):
+              precision    recall  f1-score   support
+
+           0       0.86      0.84      0.85        37
+           1       0.87      0.90      0.88        50
+           2       1.00      0.67      0.80         3
+
+    accuracy                           0.87        90
+   macro avg       0.91      0.80      0.84        90
+weighted avg       0.87      0.87      0.87        90
+
+
+
+
+==================================================
+EWALUACJA MODELU: Random Forest (Random Search + SMOTE)
+==================================================
+Fitting 15 folds for each of 50 candidates, totalling 750 fits
+Best CV Score (f1_macro) for Random Forest (Random Search + SMOTE): 0.6752 (+/- 0.0954)
+Najlepsze parametry: {'classifier__max_depth': 40, 'classifier__max_features': 'sqrt', 'classifier__min_samples_leaf': 3, 'classifier__min_samples_split': 3, 'classifier__n_estimators': 487}
+
+Classification Report for Random Forest (Random Search + SMOTE):
+              precision    recall  f1-score   support
+
+           0       0.83      0.81      0.82        37
+           1       0.85      0.88      0.86        50
+           2       1.00      0.67      0.80         3
+
+    accuracy                           0.84        90
+   macro avg       0.89      0.79      0.83        90
+weighted avg       0.85      0.84      0.84        90
+
+
+
+==================================================
+EWALUACJA MODELU: Random Forest (Deltas + Ratios + SMOTE)
+==================================================
+Fitting 15 folds for each of 36 candidates, totalling 540 fits
+Best CV Score (f1_macro) for Random Forest (Deltas + Ratios + SMOTE): 0.6387 (+/- 0.1001)
+Najlepsze parametry: {'classifier__max_depth': 5, 'classifier__max_features': 'sqrt', 'classifier__min_samples_leaf': 4, 'classifier__n_estimators': 500}
+
+Classification Report for Random Forest (Deltas + Ratios + SMOTE):
+              precision    recall  f1-score   support
+
+           0       0.81      0.81      0.81        37
+           1       0.86      0.84      0.85        50
+           2       0.75      1.00      0.86         3
+
+    accuracy                           0.83        90
+   macro avg       0.81      0.88      0.84        90
+weighted avg       0.83      0.83      0.83        90
+
+
+
+
+==================================================
+EWALUACJA MODELU: KNN (Bazowy)
+==================================================
+Mean CV F1 Score for KNN (Bazowy): 0.5003 (+/- 0.0673)
+
+Classification Report for KNN (Bazowy):
+              precision    recall  f1-score   support
+
+           0       0.80      0.76      0.78        37
+           1       0.78      0.86      0.82        50
+           2       0.00      0.00      0.00         3
+
+    accuracy                           0.79        90
+   macro avg       0.53      0.54      0.53        90
+weighted avg       0.76      0.79      0.77        90
+
+c:\Users\maciek\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+c:\Users\maciek\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+c:\Users\maciek\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+
+
+
+
+
+
+
+==================================================
+EWALUACJA MODELU: K-Nearest Neighbors (Bazowy + SMOTE)
+==================================================
+Mean CV F1 Score for K-Nearest Neighbors (Bazowy + SMOTE): 0.5537 (+/- 0.0861)
+
+Classification Report for K-Nearest Neighbors (Bazowy + SMOTE):
+              precision    recall  f1-score   support
+
+           0       0.72      0.84      0.78        37
+           1       0.88      0.72      0.79        50
+           2       0.50      1.00      0.67         3
+
+    accuracy                           0.78        90
+   macro avg       0.70      0.85      0.74        90
+weighted avg       0.80      0.78      0.78        90
+
+
+
+
+
+==================================================
+EWALUACJA MODELU: KNN (Grid Search + SMOTE)
+==================================================
+Fitting 15 folds for each of 42 candidates, totalling 630 fits
+Best CV Score (f1_macro) for KNN (Grid Search + SMOTE): 0.5773 (+/- 0.0699)
+Najlepsze parametry: {'classifier__metric': 'minkowski', 'classifier__n_neighbors': 9, 'classifier__p': 2, 'classifier__weights': 'uniform'}
+
+Classification Report for KNN (Grid Search + SMOTE):
+              precision    recall  f1-score   support
+
+           0       0.71      0.86      0.78        37
+           1       0.89      0.68      0.77        50
+           2       0.43      1.00      0.60         3
+
+    accuracy                           0.77        90
+   macro avg       0.68      0.85      0.72        90
+weighted avg       0.80      0.77      0.77        90
+
+
+
+
+
+
+==================================================
+EWALUACJA MODELU: KNN (Deltas + PCA + SMOTE + GridSearch)
+==================================================
+Fitting 15 folds for each of 20 candidates, totalling 300 fits
+Best CV Score (f1_macro) for KNN (Deltas + PCA + SMOTE + GridSearch): 0.5387 (+/- 0.0614)
+Najlepsze parametry: {'classifier__n_neighbors': 3, 'classifier__p': 2, 'classifier__weights': 'uniform'}
+
+Classification Report for KNN (Deltas + PCA + SMOTE + GridSearch):
+              precision    recall  f1-score   support
+
+           0       0.49      0.62      0.55        37
+           1       0.66      0.46      0.54        50
+           2       0.38      1.00      0.55         3
+
+    accuracy                           0.54        90
+   macro avg       0.51      0.69      0.54        90
+weighted avg       0.58      0.54      0.54        90
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
